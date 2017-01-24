@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79F2E9F9-549C-4115-8924-6701CA271094}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRMS</RootNamespace>
+    <AssemblyName>HRMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\CompanyProfile.cs" />
+    <Compile Include="Class\dataProvider.cs" />
+    <Compile Include="Class\dbConnection.cs" />
+    <Compile Include="Class\DBController.cs" />
+    <Compile Include="Class\Division.cs" />
+    <Compile Include="Class\SQL.cs" />
+    <Compile Include="frmBankAccountAssignOPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankAccountAssignOPI.Designer.cs">
+      <DependentUpon>frmBankAccountAssignOPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankAccountAssignSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankAccountAssignSalary.Designer.cs">
+      <DependentUpon>frmBankAccountAssignSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankBranchMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankBranchMaster.Designer.cs">
+      <DependentUpon>frmBankBranchMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankBranchSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankBranchSetup.Designer.cs">
+      <DependentUpon>frmBankBranchSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankMaster.Designer.cs">
+      <DependentUpon>frmBankMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBankSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankSetup.Designer.cs">
+      <DependentUpon>frmBankSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBonusDefinationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBonusDefinationMaster.Designer.cs">
+      <DependentUpon>frmBonusDefinationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBonusDefinationSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBonusDefinationSetup.Designer.cs">
+      <DependentUpon>frmBonusDefinationSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBonusParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBonusParameter.Designer.cs">
+      <DependentUpon>frmBonusParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBonusParameterMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBonusParameterMaster.Designer.cs">
+      <DependentUpon>frmBonusParameterMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBonusPaymentWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBonusPaymentWizard.Designer.cs">
+      <DependentUpon>frmBonusPaymentWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyProfile.Designer.cs">
+      <DependentUpon>frmCompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDegreeTitleMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDegreeTitleMaster.Designer.cs">
+      <DependentUpon>frmDegreeTitleMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDegreeTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDegreeTitle.Designer.cs">
+      <DependentUpon>frmDegreeTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartment.Designer.cs">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartmentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartmentMaster.Designer.cs">
+      <DependentUpon>frmDepartmentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesignationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesignationMaster.Designer.cs">
+      <DependentUpon>frmDesignationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesignation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesignation.Designer.cs">
+      <DependentUpon>frmDesignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplinaryActionTaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplinaryActionTaken.Designer.cs">
+      <DependentUpon>frmDisciplinaryActionTaken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplinaryComplainMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplinaryComplainMaster.Designer.cs">
+      <DependentUpon>frmDisciplinaryComplainMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplinaryComplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplinaryComplain.Designer.cs">
+      <DependentUpon>frmDisciplinaryComplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplinaryPunishmentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplinaryPunishmentMaster.Designer.cs">
+      <DependentUpon>frmDisciplinaryPunishmentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplinaryPunishment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplinaryPunishment.Designer.cs">
+      <DependentUpon>frmDisciplinaryPunishment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDistrictMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDistrictMaster.Designer.cs">
+      <DependentUpon>frmDistrictMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDistrict.Designer.cs">
+      <DependentUpon>frmDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDivision.Designer.cs">
+      <DependentUpon>frmDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDivisionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDivisionMaster.Designer.cs">
+      <DependentUpon>frmDivisionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarningDeductionApplied.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarningDeductionApplied.designer.cs">
+      <DependentUpon>frmEarningDeductionApplied.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarningDeductionGradeSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarningDeductionGradeSetup.Designer.cs">
+      <DependentUpon>frmEarningDeductionGradeSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarningDeductionGradeSetupMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarningDeductionGradeSetupMaster.Designer.cs">
+      <DependentUpon>frmEarningDeductionGradeSetupMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarningDeductionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarningDeductionMaster.Designer.cs">
+      <DependentUpon>frmEarningDeductionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEarningdeductionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEarningdeductionSetup.designer.cs">
+      <DependentUpon>frmEarningdeductionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducationTypeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducationTypeMaster.Designer.cs">
+      <DependentUpon>frmEducationTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducationType.Designer.cs">
+      <DependentUpon>frmEducationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeGradesMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeGradesMaster.Designer.cs">
+      <DependentUpon>frmEmployeeGradesMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeGrades.Designer.cs">
+      <DependentUpon>frmEmployeeGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeInformation.Designer.cs">
+      <DependentUpon>frmEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeTypeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeTypeMaster.Designer.cs">
+      <DependentUpon>frmEmployeeTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeType.Designer.cs">
+      <DependentUpon>frmEmployeeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeGroupMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeGroupMaster.Designer.cs">
+      <DependentUpon>frmGradeGroupMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeGroup.Designer.cs">
+      <DependentUpon>frmGradeGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstituteMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstituteMaster.Designer.cs">
+      <DependentUpon>frmInstituteMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstitute.Designer.cs">
+      <DependentUpon>frmInstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoanSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoanSchedule.Designer.cs">
+      <DependentUpon>frmLoanSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoanTypeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoanTypeMaster.Designer.cs">
+      <DependentUpon>frmLoanTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoanTypeSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoanTypeSetup.Designer.cs">
+      <DependentUpon>frmLoanTypeSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNationalityMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNationalityMaster.Designer.cs">
+      <DependentUpon>frmNationalityMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNationality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNationality.Designer.cs">
+      <DependentUpon>frmNationality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNominationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNominationMaster.Designer.cs">
+      <DependentUpon>frmNominationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNomination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNomination.Designer.cs">
+      <DependentUpon>frmNomination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOccupationsMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOccupationsMaster.Designer.cs">
+      <DependentUpon>frmOccupationsMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOccupations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOccupations.Designer.cs">
+      <DependentUpon>frmOccupations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPIGradeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPIGradeMaster.Designer.cs">
+      <DependentUpon>frmOPIGradeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPIGradeSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPIGradeSetup.Designer.cs">
+      <DependentUpon>frmOPIGradeSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPIIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPIIndividual.Designer.cs">
+      <DependentUpon>frmOPIIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPIItemMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPIItemMaster.Designer.cs">
+      <DependentUpon>frmOPIItemMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOPIItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOPIItemSetup.Designer.cs">
+      <DependentUpon>frmOPIItemSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelation.Designer.cs">
+      <DependentUpon>frmRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelationMaster.Designer.cs">
+      <DependentUpon>frmRelationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReligionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReligionMaster.Designer.cs">
+      <DependentUpon>frmReligionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReligion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReligion.Designer.cs">
+      <DependentUpon>frmReligion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanaMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanaMaster.Designer.cs">
+      <DependentUpon>frmThanaMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThana.Designer.cs">
+      <DependentUpon>frmThana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainingTypeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainingTypeMaster.Designer.cs">
+      <DependentUpon>frmTrainingTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainingType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainingType.Designer.cs">
+      <DependentUpon>frmTrainingType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayProcess.Designer.cs">
+      <DependentUpon>frmWeeklyHolidayProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocation.Designer.cs">
+      <DependentUpon>frmLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationMaster.Designer.cs">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSection.Designer.cs">
+      <DependentUpon>frmSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSectionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSectionMaster.Designer.cs">
+      <DependentUpon>frmSectionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubDepartment.Designer.cs">
+      <DependentUpon>frmSubDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubDepartmentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubDepartmentMaster.Designer.cs">
+      <DependentUpon>frmSubDepartmentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayCalenderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayCalenderView.Designer.cs">
+      <DependentUpon>frmWeeklyHolidayCalenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeeklyHolidayMaster.Designer.cs">
+      <DependentUpon>frmWeeklyHolidayMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeeklyHolidaySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeeklyHolidaySetup.Designer.cs">
+      <DependentUpon>frmWeeklyHolidaySetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYearlyHolidayMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYearlyHolidayMaster.Designer.cs">
+      <DependentUpon>frmYearlyHolidayMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYearlyHolidaySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYearlyHolidaySetup.Designer.cs">
+      <DependentUpon>frmYearlyHolidaySetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBankAccountAssignOPI.resx">
+      <DependentUpon>frmBankAccountAssignOPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankAccountAssignSalary.resx">
+      <DependentUpon>frmBankAccountAssignSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankBranchMaster.resx">
+      <DependentUpon>frmBankBranchMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankBranchSetup.resx">
+      <DependentUpon>frmBankBranchSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankMaster.resx">
+      <DependentUpon>frmBankMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBankSetup.resx">
+      <DependentUpon>frmBankSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBonusDefinationMaster.resx">
+      <DependentUpon>frmBonusDefinationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBonusDefinationSetup.resx">
+      <DependentUpon>frmBonusDefinationSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBonusParameter.resx">
+      <DependentUpon>frmBonusParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBonusParameterMaster.resx">
+      <DependentUpon>frmBonusParameterMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBonusPaymentWizard.resx">
+      <DependentUpon>frmBonusPaymentWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyProfile.resx">
+      <DependentUpon>frmCompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDegreeTitleMaster.resx">
+      <DependentUpon>frmDegreeTitleMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDegreeTitle.resx">
+      <DependentUpon>frmDegreeTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartmentMaster.resx">
+      <DependentUpon>frmDepartmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesignationMaster.resx">
+      <DependentUpon>frmDesignationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesignation.resx">
+      <DependentUpon>frmDesignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplinaryActionTaken.resx">
+      <DependentUpon>frmDisciplinaryActionTaken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplinaryComplainMaster.resx">
+      <DependentUpon>frmDisciplinaryComplainMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplinaryComplain.resx">
+      <DependentUpon>frmDisciplinaryComplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplinaryPunishmentMaster.resx">
+      <DependentUpon>frmDisciplinaryPunishmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplinaryPunishment.resx">
+      <DependentUpon>frmDisciplinaryPunishment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDistrictMaster.resx">
+      <DependentUpon>frmDistrictMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDistrict.resx">
+      <DependentUpon>frmDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDivision.resx">
+      <DependentUpon>frmDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDivisionMaster.resx">
+      <DependentUpon>frmDivisionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarningDeductionApplied.resx">
+      <DependentUpon>frmEarningDeductionApplied.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarningDeductionGradeSetup.resx">
+      <DependentUpon>frmEarningDeductionGradeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarningDeductionGradeSetupMaster.resx">
+      <DependentUpon>frmEarningDeductionGradeSetupMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarningDeductionMaster.resx">
+      <DependentUpon>frmEarningDeductionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEarningdeductionSetup.resx">
+      <DependentUpon>frmEarningdeductionSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducationTypeMaster.resx">
+      <DependentUpon>frmEducationTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducationType.resx">
+      <DependentUpon>frmEducationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeGradesMaster.resx">
+      <DependentUpon>frmEmployeeGradesMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeGrades.resx">
+      <DependentUpon>frmEmployeeGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeInformation.resx">
+      <DependentUpon>frmEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeTypeMaster.resx">
+      <DependentUpon>frmEmployeeTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeType.resx">
+      <DependentUpon>frmEmployeeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeGroupMaster.resx">
+      <DependentUpon>frmGradeGroupMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeGroup.resx">
+      <DependentUpon>frmGradeGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstituteMaster.resx">
+      <DependentUpon>frmInstituteMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstitute.resx">
+      <DependentUpon>frmInstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoanSchedule.resx">
+      <DependentUpon>frmLoanSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoanTypeMaster.resx">
+      <DependentUpon>frmLoanTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoanTypeSetup.resx">
+      <DependentUpon>frmLoanTypeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNationalityMaster.resx">
+      <DependentUpon>frmNationalityMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNationality.resx">
+      <DependentUpon>frmNationality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNominationMaster.resx">
+      <DependentUpon>frmNominationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNomination.resx">
+      <DependentUpon>frmNomination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOccupationsMaster.resx">
+      <DependentUpon>frmOccupationsMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOccupations.resx">
+      <DependentUpon>frmOccupations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPIGradeMaster.resx">
+      <DependentUpon>frmOPIGradeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPIGradeSetup.resx">
+      <DependentUpon>frmOPIGradeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPIIndividual.resx">
+      <DependentUpon>frmOPIIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPIItemMaster.resx">
+      <DependentUpon>frmOPIItemMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOPIItemSetup.resx">
+      <DependentUpon>frmOPIItemSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelationMaster.resx">
+      <DependentUpon>frmRelationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelation.resx">
+      <DependentUpon>frmRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReligionMaster.resx">
+      <DependentUpon>frmReligionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReligion.resx">
+      <DependentUpon>frmReligion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanaMaster.resx">
+      <DependentUpon>frmThanaMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThana.resx">
+      <DependentUpon>frmThana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainingTypeMaster.resx">
+      <DependentUpon>frmTrainingTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainingType.resx">
+      <DependentUpon>frmTrainingType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeeklyHolidayProcess.resx">
+      <DependentUpon>frmWeeklyHolidayProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocation.resx">
+      <DependentUpon>frmLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationMaster.resx">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSection.resx">
+      <DependentUpon>frmSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSectionMaster.resx">
+      <DependentUpon>frmSectionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubDepartment.resx">
+      <DependentUpon>frmSubDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubDepartmentMaster.resx">
+      <DependentUpon>frmSubDepartmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeeklyHolidayCalenderView.resx">
+      <DependentUpon>frmWeeklyHolidayCalenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeeklyHolidayMaster.resx">
+      <DependentUpon>frmWeeklyHolidayMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeeklyHolidaySetup.resx">
+      <DependentUpon>frmWeeklyHolidaySetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYearlyHolidayMaster.resx">
+      <DependentUpon>frmYearlyHolidayMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYearlyHolidaySetup.resx">
+      <DependentUpon>frmYearlyHolidaySetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\New.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\finder.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
